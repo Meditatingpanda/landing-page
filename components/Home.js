@@ -33,18 +33,6 @@ const Home = () => {
               <FiberManualRecordIcon sx={{color:'rgb(245,191,79)'}}/>
               <FiberManualRecordIcon sx={{color:'rgb(98,197,84)'}}/>
             </span>
-            {/* <div>
-            <ReactPlayer 
-             height='100%'
-             width='100%' 
-             playing={true} 
-             loop={true}
-             muted={true} 
-             controls={false}
-             
-             url='/json.mp4'
-              />
-              </div> */}
               <video className="mt-3" loop={true} autoPlay={true} muted controls={false} src="/json.mp4"></video>
           </div>
         </Grid>
