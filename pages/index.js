@@ -1,8 +1,15 @@
+import Footer from "../components/Footer";
+import Home from "../components/Home";
+import UseCases from "../components/UseCases";
 
-export default function Home() {
+function Hero() {
   return (
-    <div  >
-       hello world
+    <div>
+      <Home />
+      <UseCases/>
+      <Footer/>
     </div>
-  )
+  );
 }
+
+export default Hero;
