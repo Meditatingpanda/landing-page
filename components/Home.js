@@ -33,7 +33,7 @@ const Home = () => {
               <FiberManualRecordIcon sx={{color:'rgb(245,191,79)'}}/>
               <FiberManualRecordIcon sx={{color:'rgb(98,197,84)'}}/>
             </span>
-              <video className="mt-3" loop={true} autoPlay={true} muted controls={false} src="/json.mp4"></video>
+              <video className="mt-3" loop={true} autoPlay={true} muted controls={false} src="/demo.mp4"></video>
           </div>
         </Grid>
       </Grid>
