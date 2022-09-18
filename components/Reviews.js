@@ -1,22 +1,28 @@
-import { Card } from "@mui/material";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 const Cards=()=>{
     return(
-        <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <blockquote class="p-8 bg-gray-100 rounded-lg">
-            <div class="flex items-center">
+
+      <blockquote className="p-8 bg-gray-100 rounded-lg ">
+            <div className="flex items-center">
               <img
                 alt="Man"
                 src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                class="object-cover w-16 h-16 rounded-full"
+                className="object-cover w-16 h-16 rounded-full"
               />
 
-              <div class="ml-4">
-                <div class="flex gap-0.5 justify-center text-green-500">
+              <div className="ml-4">
+                <div className="flex gap-0.5 justify-center text-green-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -26,7 +32,7 @@ const Cards=()=>{
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -36,7 +42,7 @@ const Cards=()=>{
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -46,7 +52,7 @@ const Cards=()=>{
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -56,7 +62,7 @@ const Cards=()=>{
                   </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4"
+                    className="w-4 h-4"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -66,34 +72,60 @@ const Cards=()=>{
                   </svg>
                 </div>
 
-                <p class="mt-1 text-lg font-medium text-gray-700">Paul Starr</p>
+                <p className="mt-1 text-lg font-medium text-gray-700">Paul Starr</p>
               </div>
             </div>
 
-            <p class="mt-4 text-gray-500">
+            <p className="mt-4 text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
               voluptatem alias ut provident sapiente repellendus.
             </p>
           </blockquote>
-        </div>
-
-       </div>
+        
     )
 }
 
 const Reviews = () => {
     return (
-        <section class="bg-white">
-        <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
-          <h2 class="text-4xl font-bold tracking-tight text-center sm:text-5xl">
+        <section className="bg-white">
+        <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
+          <h2 className="text-4xl font-bold tracking-tight text-center sm:text-5xl">
             Read trusted reviews from our customers
           </h2>
       
-          <div class="mt-12 flex gap-5 swiper-container !overflow-hidden">
-              <Cards/>
-              <Cards/>
-              <Cards/>
-              <Cards/>
+          <div className="mt-12 flex gap-5 swiper-container !overflow-hidden">
+         <Swiper 
+        slidesPerView={3}
+        spaceBetween={30} 
+        navigation={true}
+        breakpoints={{
+          320:{
+            slidesPerView:1,
+            
+          },
+          640: {
+            slidesPerView: 1,
+          
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Navigation]}
+         className="mySwiper">
+        
+        <SwiperSlide><Cards/></SwiperSlide>
+        <SwiperSlide><Cards/></SwiperSlide>
+        <SwiperSlide><Cards/></SwiperSlide>
+        <SwiperSlide><Cards/></SwiperSlide>
+        <SwiperSlide><Cards/></SwiperSlide>
+        <SwiperSlide><Cards/></SwiperSlide>
+      </Swiper>
              </div>
              </div>
            

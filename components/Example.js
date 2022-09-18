@@ -4,7 +4,7 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 const Example = ({heading,desc,url,rev}) => {
     return (
         
-           <Grid container spacing={10} sx={{ mt:1}} className={rev && 'flex-row-reverse'} >
+           <Grid container spacing={10} sx={{ mt:1,flexDirection:rev &&'row-reverse'}}  >
              <Grid xs={12} sm={6} item className="flex items-center">
         
           <div className="text-gray-600  sm:text-sm text-xl mb-3 font-bold">{heading}</div>     
