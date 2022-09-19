@@ -6,36 +6,29 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [clicked, setClicked] = useState(false);
-  const [btn,setBtn] = useState('h-full px-4 flex items-center  justify-center rounded-l-full  bg-black cursor-pointer text-xs sm:text-base');
-  const [input,setInput]=useState('bg-transparent  pl-4 placeholder:text-white  placeholder:text-sm w-[65%] focus:outline-none')
-  useEffect(()=>{
-    if(clicked){
-        setInput(pr=>pr+' hidden')
-        setBtn(pr=>pr+' w-full');
-    }
-    console.log(btn);
-  },[clicked,btn])
+ 
   return (
     <div className="relative min-h-screen bg-gradient flex justify-center items-center">
       <Navbar />
       <Grid container sx={{ width: "85%" ,mt:'5rem'}}>
         <Grid xs={12} sm={6} item>
           {/* <div className="text-primary text-5xl mb-4 font-bold">FRIFTY</div> */}
-          <div className="text-white  sm:text-5xl text-3xl mb-10 font-bold">Experience search like never before</div>
+          <div className="text-white   sm:text-5xl text-3xl mb-10 font-bold">Give wings to your search</div>
          
-          <div className="text-white  flex items-center  mb-3 text-sm "><FiberManualRecordIcon fontSize="10px" sx={{ color: "white" }} />Shows interactive widgets right under the search bar</div>
-          <div className="text-white flex items-center  mb-3 text-sm "><FiberManualRecordIcon fontSize="10px" sx={{ color: "white" }} />Saves you from unnecessary links and stupid signups</div>
-          <div className="text-white flex items-center mb-3 text-sm "><FiberManualRecordIcon fontSize="10px" sx={{ color: "white" }} />Brings your favorite games without the need to download</div>
-          <div className='h-12   sm:w-[25rem] border-black border-[1px] w-full mt-8 flex rounded-l-full rounded-r-full overflow-hidden  justify-between items-center bg-primary text-white text-base rounded-md '>
+          <div className="text-white   flex items-center  mb-3 text-lg "><FiberManualRecordIcon fontSize="10px" sx={{ color: "white" }} />Interactive widgets under Google search</div>
+          <div className="text-white  flex items-center  mb-3 text-lg "><FiberManualRecordIcon fontSize="10px" sx={{ color: "white" }} />No unnecessary links or stupid signups</div>
+          <div className="text-white  flex items-center mb-3 text-lg"><FiberManualRecordIcon fontSize="10px" sx={{ color: "white" }} />Play games without any downloads</div>
+          <div className="text-white  flex items-center mb-3 text-lg "><FiberManualRecordIcon fontSize="10px" sx={{ color: "white" }} />Dislike and don’t see it ever again</div>
+          <div className='h-12 cursor-pointer hover:animate-pulse   sm:w-[25rem] border-black border-[1px] w-full mt-8 flex rounded-l-full rounded-r-full overflow-hidden  justify-center text-black font-bold items-center bg-primary  text-base rounded-md '>
            
-              <input placeholder="Enter Your Email"  className={input}/>
+              {/* <input placeholder="Enter Your Email"  className={input}/>
               <span
                onClick={()=>setClicked(!clicked)}
               className={btn}>
                {!clicked?'Subscribe':'Ready To Roll 🤙🏻'}
             { !clicked && <ArrowCircleRightIcon sx={{ color: 'white',ml:1 }} />}
-              </span>
+              </span> */}
+              Add To Your Browser Now
            
           </div>
         </Grid>

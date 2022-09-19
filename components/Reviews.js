@@ -112,8 +112,12 @@ const Reviews = () => {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 50,
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1444: {
+            slidesPerView: 3,
+            spaceBetween: 20,
           },
         }}
         modules={[Navigation]}

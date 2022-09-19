@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         'primary': '#0C9488',
         'secondary': '#F3F4F6',
-        'tertiary': '',
+        'tertiary': '#1A212A',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
@@ -32,5 +32,6 @@ module.exports = {
 
     }
   },
+  important: true,
   plugins: [],
 }

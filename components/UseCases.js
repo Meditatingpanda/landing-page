@@ -18,7 +18,7 @@ const UseCases = () => {
            heading='Or compromising on privacy 🛟
           
            '
-           desc=' We don’t collect any emails or IDs. We only capture your search history and your preferences in order to keep making awesome widgets for you. And we don’t even share that with any other third party.'
+           desc='We don’t collect any emails or IDs. Just your search history and your preferences.'
           />
         </div>
     );
