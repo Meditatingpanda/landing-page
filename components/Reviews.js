@@ -90,7 +90,7 @@ const Reviews = () => {
         <section className="bg-white">
         <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
           <h2 className="text-4xl font-bold tracking-tight text-center sm:text-5xl">
-            Read trusted reviews from our customers
+          What our users have to say!
           </h2>
       
           <div className="mt-12 flex gap-5 swiper-container !overflow-hidden">

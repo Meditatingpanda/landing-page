@@ -5,9 +5,10 @@ const Example = ({heading,desc,url,rev}) => {
     return (
         
            <Grid container spacing={10} sx={{ mt:1,flexDirection:rev &&'row-reverse'}}  >
-             <Grid xs={12} sm={6} item className="flex items-center">
+             <Grid xs={12} sm={6} item className="flex flex-col justify-center items-center">
         
-          <div className="text-gray-600  sm:text-sm text-xl mb-3 font-bold">{heading}</div>     
+          <div className="text-gray-600  sm:text-3xl mb-3 font-bold">{heading}</div>     
+          <div className="text-gray-600  sm:text-base mb-3 font-bold">{desc}</div>     
         </Grid>
         <Grid xs={12} sm={6} item   >
           <div className="h-full w-full relative bg-white rounded-md p-4 ">

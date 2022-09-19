@@ -20,6 +20,7 @@ const Footer = () => {
                 <span className='flex gap-6  mb-3'>
                 <a >Blog</a>
                 <a>Contact Us</a>
+                <a>Privacy Policy</a>
                 </span>
              </div>
             </div>
