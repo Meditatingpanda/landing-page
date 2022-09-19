@@ -1,141 +1,145 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import { Avatar, Badge } from "@mui/material";
+import { Twitter } from "@mui/icons-material";
 
-const Cards=()=>{
-    return(
 
-      <blockquote className="p-8 bg-gray-100 rounded-lg ">
-            <div className="flex items-center">
-              <img
-                alt="Man"
-                src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                className="object-cover w-16 h-16 rounded-full"
-              />
+const Cards = ({name,id,role,review}) => {
+  return (
 
-              <div className="ml-4">
-                <div className="flex gap-0.5 justify-center text-green-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                </div>
+    <div className="min-h-[8rem]">
+      <div className="p-3 flex gap-4 shadow-md bg-white">
+        <span>
+          <Badge
+            overlap="circular"
+            anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+            badgeContent={
+              <Twitter className="z-10 text-sky-600" />
+            }
+          >
+            <Avatar className="overflow-visible" alt={name} src="/static/images/avatar/2.jpg" />
+          </Badge>
 
-                <p className="mt-1 text-lg font-medium text-gray-700">Paul Starr</p>
-              </div>
-            </div>
+        </span>
+        <div className="flex flex-col">
+          <div className="flex gap-6">
+          <span className="font-bold">
+            {name}
+          </span>
+          <span className="text-gray-600">{role}</span>
+          </div>
+          
+          <span className="text-gray-400 text-sm">
+            @{id}
+          </span>
+         
 
-            <p className="mt-4 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-              voluptatem alias ut provident sapiente repellendus.
-            </p>
-          </blockquote>
-        
-    )
+          <div>
+            atae minima, praesentium officia dicta. Amet maiores mollitia mole
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  )
 }
 
 const Reviews = () => {
-    return (
-        <section className="bg-white">
-        <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
-          <h2 className="text-4xl font-bold tracking-tight text-center sm:text-5xl">
+  return (
+    <section className="bg-white">
+      <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
+        <h2 className="text-4xl font-bold tracking-tight text-center sm:text-5xl">
           What our users have to say!
-          </h2>
-      
-          <div className="mt-12 flex gap-5 swiper-container !overflow-hidden">
-         <Swiper 
-        slidesPerView={3}
-        spaceBetween={30} 
-        navigation={true}
-        breakpoints={{
-          320:{
-            slidesPerView:1,
+        </h2>
+
+        <div className="mt-12 flex gap-5 swiper-container !overflow-hidden">
+          <Swiper
             
-          },
-          640: {
-            slidesPerView: 1,
-          
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1444: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        }}
-        modules={[Navigation]}
-         className="mySwiper">
-        
-        <SwiperSlide><Cards/></SwiperSlide>
-        <SwiperSlide><Cards/></SwiperSlide>
-        <SwiperSlide><Cards/></SwiperSlide>
-        <SwiperSlide><Cards/></SwiperSlide>
-        <SwiperSlide><Cards/></SwiperSlide>
-        <SwiperSlide><Cards/></SwiperSlide>
-      </Swiper>
-             </div>
-             </div>
-           
-      
-      </section>
-    );
+            slidesPerView={3}
+            spaceBetween={30}
+            navigation={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+
+              },
+              640: {
+                slidesPerView: 1,
+
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1444: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+            modules={[Navigation]}
+
+            className="mySwiper p-4 max-h-[15rem]">
+
+            <SwiperSlide><Cards 
+              name="Maj Uday Anshuman"
+              id="majudayanshuman"
+              role="Indian Army"
+            /></SwiperSlide>
+            <SwiperSlide><Cards 
+              name="Pranati Bharadkar"
+              id="pranatibharadkar"
+              role="Undergraduate student"
+            /></SwiperSlide>
+            <SwiperSlide><Cards 
+              name="Sanket Sahu"
+              id="sanketsahu"
+              role="Data Engineer, Google"
+            /></SwiperSlide>
+            <SwiperSlide><Cards 
+              name="Karan Ratnam"
+              id="karanratnam"
+              role="Associate, McKinsey"
+            /></SwiperSlide>
+            <SwiperSlide><Cards 
+              name="Anshika Garg"
+              id="anshikagarg"
+              role="Brand Manager, Dabur"
+            /></SwiperSlide>
+            <SwiperSlide><Cards 
+              name="Neha"
+              id="neha"
+              role="AVP, Goldman Sachs"
+            /></SwiperSlide>
+            <SwiperSlide><Cards 
+              name="Sidhant Pati"
+              id="sidhantpati"
+              role="Program Manager, Amazon"
+            /></SwiperSlide>
+            <SwiperSlide><Cards 
+              name="Ayan Chakraborty"
+              id="ayanchakraborty"
+              role="Product Manager, Microsoft"
+            /></SwiperSlide>
+            
+            
+          </Swiper>
+        </div>
+      </div>
+
+
+    </section>
+  );
 }
 
 export default Reviews;
