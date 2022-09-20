@@ -5,7 +5,7 @@ import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import DoneIcon from '@mui/icons-material/Done';
 import { Card, TextField, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 
 const Privacy = ({ handleClose }) => {
     const list1 = [
@@ -35,7 +35,7 @@ const Privacy = ({ handleClose }) => {
                     </ul>
                 </div>
                 <div>
-                    <span className='mb-4'>Here is what we collect 🫡</span>
+                    <span className='mb-4'>Here is what we collect <VerifiedUserIcon  className='text-primary'/></span>
                     <ul >
 
                         {

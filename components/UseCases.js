@@ -1,5 +1,5 @@
 import Example from "./Example";
-
+import SecurityIcon from '@mui/icons-material/Security';
 const UseCases = () => {
     return (
         <div className="min-h-screen overflow-hidden bg-gray-200 p-5 sm:p-20 flex flex-col justify-center items-center">
@@ -17,9 +17,7 @@ const UseCases = () => {
            //desc='Frifty does the heavy lifting so that you enjoy the convenience without changing a thing.'
           />
           <Example
-           heading='Or compromising on privacy 🛟
-          
-           '
+           heading='Or compromising on privacy 🤫'
            url={'/demo2.mp4'}
            desc='We don’t collect any emails or IDs. Just your search history and your preferences.'
           />
