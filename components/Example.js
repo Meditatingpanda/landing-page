@@ -14,6 +14,7 @@ const Example = ({heading,desc,url,rev}) => {
              <Grid xs={12} sm={6} item 
                className="flex flex-col justify-center items-center"
                data-aos="fade-right"
+               data-aos-offset="300"
                data-aos-duration="700"
              >
         
@@ -22,8 +23,10 @@ const Example = ({heading,desc,url,rev}) => {
             sm:text-3xl mb-3 font-bold">{heading}</div>     
           <div className="text-gray-600   sm:text-base mb-3 font-bold">{desc}</div>     
         </Grid>
-        <Grid xs={12} sm={6} item data-aos="fade-left"
+        <Grid xs={12} sm={6} item 
+          data-aos="fade-left"
           data-aos-duration="700"
+          data-aos-offset="300"
         >
           <div className="h-full w-full relative bg-white rounded-md p-4 ">
             <span className="mb-4 -ml-1 absolute top-0">

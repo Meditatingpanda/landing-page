@@ -14,7 +14,7 @@ const Cards = ({name,id,role,review}) => {
   return (
 
     <div className="min-h-[8rem]">
-      <div className="p-3 flex gap-4 shadow-md bg-white">
+      <div className="p-5 rounded flex gap-4 shadow-md bg-white">
         <span>
           <Badge
             overlap="circular"
