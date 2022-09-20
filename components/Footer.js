@@ -1,13 +1,11 @@
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import DoneIcon from '@mui/icons-material/Done';
 import { Card, TextField, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+
 
 const Privacy = ({ handleClose }) => {
     const list1 = [
@@ -46,8 +44,7 @@ const Privacy = ({ handleClose }) => {
                     </ul>
                 </div>
             </div>
-            <p className='text-center text-sm '>We just want to understand what you browse so that we can build awesome apps to improve your
-                search experience that&apos;s all. We honestly can&apos;t even tell it&apos;s you.</p>
+            <p className='text-center text-sm '>We only capture your search history to build awesome widgets for you. We honestly can&apos;t even tell if it&apos;s you.</p>
         </div>
     )
 }
@@ -61,21 +58,21 @@ const Footer = () => {
     const [category, setCategory] = useState('');
     const [reason, setReason] = useState('');
     const reasons = ['Feedback', 'Bug Report', 'Feature Request', 'Join Our Core Team', 'Freelancer Queries', 'Others']
-    const reason1=['Feedback','Suggest New Feature','Propose a partnership','Others']
+    const reason1 = ['Feedback', 'Suggest New Feature', 'Propose a partnership', 'Others']
     return (
         <footer className="bg-gradient flex justify-center flex-col  items-center min-h-36 text-white">
             <div className="w-full flex-wrap flex items-center sm:justify-between justify-center border-white border-b-[1px]">
                 <span className='flex flex-col ml-3 mt-4 mb-4'>
-                    <p className='text-sm'>💌 Get notified about new features and updates</p>
-                    <div className='h-12  mb-2 px-4 py-2 sm:w-[25rem] w-full mt-2 flex  justify-between items-center  border-[1px] border-white text-white text-base rounded-md '>
-                        <input placeholder="Enter Your Email" className="bg-transparent placeholder:text-white w-[65%] placeholder:text-sm focus:outline-none " />
-                        <span className="w-[40%] sm:w-auto cursor-pointer text-xs">
-                            Stay Tuned
+                    <p className='text-sm text-center'>💌 Get notified about new features and updates</p>
+                    <div className='h-12 rounded-l-full rounded-r-full overflow-hidden mb-2  sm:w-[25rem] w-full mt-2 flex  justify-between items-center  border-[1px] border-white text-white text-base rounded-md '>
+                        <input placeholder="Enter Your Email" className="bg-transparent pl-3 placeholder:text-white w-[65%] placeholder:text-sm focus:outline-none " />
+                        <span className="w-[45%] px-5 rounded-l-full flex items-center bg-black text-white h-full sm:w-auto cursor-pointer text-sm">
+                            Subscribe
                             <ArrowCircleRightIcon sx={{ color: 'white', ml: 1 }} />
                         </span>
 
                     </div>
-                    <p className='text-xs'>No spam. Unsubscribe anytime.</p>
+                    <p className='text-xs text-center'>No spam. Unsubscribe anytime.</p>
                 </span>
                 <div className='flex flex-col mr-3'>
                     <span className='flex gap-6  mb-3'>
@@ -96,9 +93,9 @@ const Footer = () => {
                             onClose={() => setOpen1(false)}
                             aria-labelledby="modal-modal-privacy"
                             aria-describedby="modal-modal-privacy-policies"
-                        
+
                         >
-                            <Card  className=' outline-none  p-10 flex flex-col shadow  gap-5 items-center absolute top-1/2 left-1/2 h-full sm:h-auto sm:w-[85%] md:w-3/4 lg:w-1/2 w-full   -translate-x-1/2 -translate-y-1/2  rounded' >
+                            <Card className=' outline-none  p-10 flex flex-col shadow  gap-5 items-center absolute top-1/2 left-1/2 h-full sm:h-auto sm:w-[85%] md:w-3/4 lg:w-1/2 w-full   -translate-x-1/2 -translate-y-1/2  rounded' >
                                 <CloseIcon className='absolute right-4 top-4 text-teal-600 cursor-pointer' onClick={() => setOpen1(false)} />
                                 <Grid container spacing={2} >
                                     <Grid item xs={12} sm={6}>
@@ -131,8 +128,8 @@ const Footer = () => {
                                                 variant='standard'
                                             >
                                                 {
-                                                   category==='individual'?reasons.map((item,index)=><MenuItem key={index} value={item}>{item}</MenuItem>):reason1.map((item,index)=><MenuItem key={index} value={item}>{item}</MenuItem>)
-                                                    
+                                                    category === 'individual' ? reasons.map((item, index) => <MenuItem key={index} value={item}>{item}</MenuItem>) : reason1.map((item, index) => <MenuItem key={index} value={item}>{item}</MenuItem>)
+
                                                 }
                                                 {/* <MenuItem value={10}>Feedback</MenuItem>
                                                 <MenuItem value={20}>Company</MenuItem> */}
@@ -188,8 +185,8 @@ const Footer = () => {
                                         variant='contained'
 
                                         className='mt-5 ml-4 bg-primary text-white'
-                                    >Send Enquiry
-                                        <ArrowRightIcon />
+                                    >Send Message
+                                        {/* <ArrowRightIcon /> */}
                                     </Button>
                                 </Grid>
                             </Card>

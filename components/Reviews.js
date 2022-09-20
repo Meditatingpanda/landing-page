@@ -16,27 +16,18 @@ const Cards = ({name,id,role,review}) => {
     <div className="min-h-[8rem]">
       <div className="p-5 rounded flex gap-4 shadow-md bg-white">
         <span>
-          <Badge
-            overlap="circular"
-            anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
-            badgeContent={
-              <Twitter className="z-10 text-sky-600" />
-            }
-          >
             <Avatar className="overflow-visible" alt={name} src="/static/images/avatar/2.jpg" />
-          </Badge>
-
         </span>
         <div className="flex flex-col">
           <div className="flex gap-6">
           <span className="font-bold">
             {name}
           </span>
-          <span className="text-gray-600">{role}</span>
+          {/* <span className="text-gray-600">{role}</span> */}
           </div>
           
           <span className="text-gray-400 text-sm">
-            @{id}
+            {role}
           </span>
          
 

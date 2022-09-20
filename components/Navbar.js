@@ -1,11 +1,9 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
-import GetAppIcon from '@mui/icons-material/GetApp';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
-import ChromeStore from './logo';
 import Image from 'next/image';
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
