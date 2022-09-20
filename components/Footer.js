@@ -58,7 +58,10 @@ const Footer = () => {
     const [open1, setOpen1] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [category, setCategory] = useState('');
+    const [reason, setReason] = useState('');
     const reasons = ['Feedback', 'Bug Report', 'Feature Request', 'Join Our Core Team', 'Freelancer Queries', 'Others']
+    const reason1=['Feedback','Suggest New Feature','Propose a partnership','Others']
     return (
         <footer className="bg-gradient flex justify-center flex-col  items-center min-h-36 text-white">
             <div className="w-full flex-wrap flex items-center sm:justify-between justify-center border-white border-b-[1px]">
@@ -93,8 +96,9 @@ const Footer = () => {
                             onClose={() => setOpen1(false)}
                             aria-labelledby="modal-modal-privacy"
                             aria-describedby="modal-modal-privacy-policies"
+                        
                         >
-                            <Card className='p-10  flex flex-col shadow  gap-5 items-center absolute top-1/2 left-1/2 h-full sm:h-auto sm:w-[85%] md:w-3/4 lg:w-1/2 w-full   -translate-x-1/2 -translate-y-1/2  rounded' >
+                            <Card  className=' outline-none  p-10 flex flex-col shadow  gap-5 items-center absolute top-1/2 left-1/2 h-full sm:h-auto sm:w-[85%] md:w-3/4 lg:w-1/2 w-full   -translate-x-1/2 -translate-y-1/2  rounded' >
                                 <CloseIcon className='absolute right-4 top-4 text-teal-600 cursor-pointer' onClick={() => setOpen1(false)} />
                                 <Grid container spacing={2} >
                                     <Grid item xs={12} sm={6}>
@@ -103,13 +107,13 @@ const Footer = () => {
                                             <Select
                                                 labelId="demo-simple-select-label"
                                                 id="demo-simple-select"
-                                                value={''}
+                                                value={category}
                                                 label="Age"
-                                                onChange={''}
+                                                onChange={(e) => setCategory(e.target.value)}
                                                 variant='standard'
                                             >
-                                                <MenuItem value={10}>Individual</MenuItem>
-                                                <MenuItem value={20}>Company</MenuItem>
+                                                <MenuItem value={'individual'}>Individual</MenuItem>
+                                                <MenuItem value={'company'}>Company</MenuItem>
 
                                             </Select>
                                         </FormControl>
@@ -121,13 +125,14 @@ const Footer = () => {
                                             <Select
                                                 labelId="demo-simple-select-label"
                                                 id="demo-simple-select"
-                                                value={''}
+                                                value={reason}
                                                 label="Age"
-                                                onChange={''}
+                                                onChange={(e) => setReason(e.target.value)}
                                                 variant='standard'
                                             >
                                                 {
-                                                    reasons.map((item, index) => <MenuItem key={index} value={item}>{item}</MenuItem>)
+                                                   category==='individual'?reasons.map((item,index)=><MenuItem key={index} value={item}>{item}</MenuItem>):reason1.map((item,index)=><MenuItem key={index} value={item}>{item}</MenuItem>)
+                                                    
                                                 }
                                                 {/* <MenuItem value={10}>Feedback</MenuItem>
                                                 <MenuItem value={20}>Company</MenuItem> */}
@@ -143,6 +148,7 @@ const Footer = () => {
                                             variant='outlined'
                                             label='Name'
                                             type='text'
+                                            className='focus:border-primary'
                                             fullWidth
                                         />
                                     </Grid>

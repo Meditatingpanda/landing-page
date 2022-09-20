@@ -7,17 +7,20 @@ const UseCases = () => {
           <Example 
            heading='Experience the future of search 🚀'
         desc='Easy to use widgets right under your search bar.'
+          url={'/demo.mp4'}
 
           />
           <Example rev={true}
            heading='Without changing your behavior 😄
            '
+           url={'/demo1.mp4'}
            desc='Frifty does the heavy lifting so that you enjoy the convenience without changing a thing.'
           />
           <Example
            heading='Or compromising on privacy 🛟
           
            '
+           url={'/demo.mp4'}
            desc='We don’t collect any emails or IDs. Just your search history and your preferences.'
           />
         </div>
