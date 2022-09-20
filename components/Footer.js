@@ -24,7 +24,7 @@ const Privacy = ({ handleClose }) => {
             <CloseIcon onClick={handleClose} className='text-white absolute cursor-pointer right-2 top-2' />
             <h1 className='text-center text-lg font-bold' >Privacy Policy 🔐</h1>
             <p className='text-center'>When you use our extension, you trust us with your data. We understand this is a big responsibility and work hard to protect your information.</p>
-            <div className='flex w-[85%] justify-between mt-7'>
+            <div className='flex w-[85%] flex-col sm:flex-row gap-3 sm:gap-0 justify-between mt-7'>
                 <div>
                     <span className='mb-4'>Here is what we do not collect 🙅‍♂️</span>
                     <ul >
