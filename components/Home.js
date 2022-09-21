@@ -10,19 +10,15 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import ThumbsUpDownIcon from '@mui/icons-material/ThumbsUpDown';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
 const Home = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
 
   return (
     <div className="relative min-h-screen bg-gradient flex justify-center items-center">
       <Navbar />
       <Grid container sx={{ width: "85%", mt: '5rem' }}>
         <div className="text-white mx-auto  sm:text-5xl text-3xl mb-16 font-bold"><SendIcon fontSize="150px" className="-rotate-45 -mt-4" />The ultimate search extension</div>
-        <Grid  data-aos-duration="700" data-aos="fade-right" xs={12} sm={6} item className="flex  flex-col justify-center">
+        <Grid    xs={12} sm={6} item className="flex  flex-col justify-center">
           {/* <div className="text-primary text-5xl mb-4 font-bold">FRIFTY</div> */}
           <div className="text-white   flex items-center  mb-3 text-lg "><SearchIcon className="mr-1" fontSize="10px" sx={{ color: "white" }} />Interactive widgets on Google search page</div>
           <div className="text-white  flex items-center  mb-3 text-lg "><PolylineIcon className="mr-1" fontSize="10px" sx={{ color: "white" }} />No unnecessary signups or stupid links</div>
@@ -35,7 +31,7 @@ const Home = () => {
 
           </div>
         </Grid>
-        <Grid  data-aos-duration="700" data-aos="fade-left" xs={12} sm={6} item className="mb-2 mt-2 sm:m-0" component={'div'} sx={{ position: 'relative' }} >
+        <Grid   xs={12} sm={6} item className="mb-2 mt-2 sm:m-0" component={'div'} sx={{ position: 'relative' }} >
           <div className="h-full w-full bg-white card p-4 ">
             <span className="mb-4 -ml-1 absolute top-0">
               <FiberManualRecordIcon sx={{ color: 'rgb(237,106,94)' }} />
