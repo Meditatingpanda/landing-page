@@ -7,7 +7,12 @@ import DoneIcon from '@mui/icons-material/Done';
 import { Card, TextField, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 
+import IconButton from '@mui/material/IconButton';
+import SimpleSnackbar from './Snackbar';
+
+
 const Privacy = ({ handleClose }) => {
+   
     const list1 = [
         "Email ID",
         "Personal identity information",
@@ -45,6 +50,7 @@ const Privacy = ({ handleClose }) => {
                 </div>
             </div>
             <p className='text-center text-sm '>We only capture your search history to build awesome widgets for you. We honestly can&apos;t even tell if it&apos;s you.</p>
+            
         </div>
     )
 }
@@ -53,6 +59,7 @@ const Privacy = ({ handleClose }) => {
 const Footer = () => {
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
+    const [open2, setOpen2] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const [category, setCategory] = useState('');
@@ -64,14 +71,15 @@ const Footer = () => {
             <div className="w-full flex-wrap flex items-center sm:justify-between justify-center border-white border-b-[1px]">
                 <span className='flex flex-col ml-3 mt-4 mb-4'>
                     <p className='text-sm text-center'>💌 Get notified about new features and updates</p>
-                    <div className='h-12 rounded-l-full rounded-r-full overflow-hidden mb-2  sm:w-[25rem] w-full mt-2 flex  justify-between items-center  border-[1px] border-white text-white text-base rounded-md '>
+                    <div className='h-12 rounded-l-full rounded-r-full overflow-hidden mb-2  sm:w-[25rem] w-full mt-2 flex  justify-between items-center  border-[1px] border-primary text-white text-base rounded-md '>
                         <input placeholder="Enter Your Email" className="bg-transparent pl-3 placeholder:text-white w-[65%] placeholder:text-sm focus:outline-none " />
-                        <span className="w-[45%] px-5 rounded-l-full flex items-center bg-black text-white h-full sm:w-auto cursor-pointer text-sm">
+                        <span onClick={()=>setOpen2(true)} className="w-[45%] px-6 rounded-l-full flex items-center bg-primary text-white h-full sm:w-auto cursor-pointer text-sm">
                             Subscribe
-                            <ArrowCircleRightIcon sx={{ color: 'white', ml: 1 }} />
+                            {/* <ArrowCircleRightIcon sx={{ color: 'white', ml: 1 }} /> */}
                         </span>
-
+                      
                     </div>
+                   
                     <p className='text-xs text-center'>No spam. Unsubscribe anytime.</p>
                 </span>
                 <div className='flex flex-col mr-3'>
@@ -97,7 +105,7 @@ const Footer = () => {
                         >
                             <Card className=' outline-none  p-10 flex flex-col shadow  gap-5 items-center absolute top-1/2 left-1/2 h-full sm:h-auto sm:w-[85%] md:w-3/4 lg:w-1/2 w-full   -translate-x-1/2 -translate-y-1/2  rounded' >
                                 <CloseIcon className='absolute right-4 top-4 text-teal-600 cursor-pointer' onClick={() => setOpen1(false)} />
-                                <Grid container spacing={2} >
+                                <Grid container spacing={2} className='flex justify-center items-center' >
                                     <Grid item xs={12} sm={6}>
                                         <FormControl fullWidth>
                                             <InputLabel id="demo-simple-select-label">Who Are You ?</InputLabel>
@@ -195,6 +203,7 @@ const Footer = () => {
                 </div>
             </div>
             <span className="text-white text-xs mt-2 mb-2">© Frifty {new Date().getFullYear()}- All rights reserved</span>
+            <SimpleSnackbar open={open2} setOpen={setOpen2}/>
         </footer>
     );
 }
