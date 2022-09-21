@@ -21,7 +21,7 @@ const Navbar = () => {
       </span>
 
       <div className='sm:flex gap-6 mr-5  sm:visible hidden' >
-        <GitHubIcon sx={{ color: "white", mt: 0.5 }} />
+        <GitHubIcon sx={{ color: "white", mt: 0.5 }} className='cursor-pointer' />
         <div className='cursor-pointer h-8 px-4 py-2 flex gap-2 items-center bg-primary text-white w-auto text-base rounded-sm '>
          <Image 
           src='/chrome.png'
