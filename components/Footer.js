@@ -80,7 +80,7 @@ const Footer = () => {
                       
                     </div>
                    
-                    <p className='text-xs text-center'>No spam. Unsubscribe anytime.</p>
+                    <p className='text-sm text-center'>No spam. Unsubscribe anytime.</p>
                 </span>
                 <div className='flex flex-col mr-3'>
                     <span className='flex gap-6  mb-3'>
