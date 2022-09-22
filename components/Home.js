@@ -16,10 +16,9 @@ const Home = () => {
   return (
     <div className="relative min-h-screen bg-gradient flex justify-center items-center">
       <Navbar />
-      <div className="flex flex-col items-center justify-center">
-        <div className="text-white mx-auto  sm:text-5xl text-3xl  font-bold"><SendIcon fontSize="150px" className="-rotate-45 -mt-4" />The ultimate search extension</div>
-        <Grid container sx={{ width: "85%", mt: '5rem' }}>
-
+      <div className="flex mt-[5.5rem]  sm:mt-0 flex-col  items-center justify-center">
+        <div className="text-white pl-7 sm:pl-0 mb-3 flex justify-center  sm:text-5xl text-3xl sm:items-center font-bold"><SendIcon fontSize="150px" className="-rotate-45 sm:-mt-2 " />The ultimate search extension</div>
+        <Grid container sx={{ width: "85%", mt: 5 }}>
           <Grid xs={12} sm={6} item className="flex  flex-col justify-center">
             {/* <div className="text-primary text-5xl mb-4 font-bold">FRIFTY</div> */}
             <div className="text-white   flex items-center  mb-3 text-lg "><SearchIcon className="mr-3" size='25px' sx={{ color: "white" }} />Interactive widgets on Google search page</div>
