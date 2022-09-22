@@ -12,7 +12,7 @@ import SimpleSnackbar from './Snackbar';
 
 
 const Privacy = ({ handleClose }) => {
-   
+
     const list1 = [
         "Email ID",
         "Personal identity information",
@@ -40,7 +40,7 @@ const Privacy = ({ handleClose }) => {
                     </ul>
                 </div>
                 <div>
-                    <span className='mb-4'>Here is what we collect <VerifiedUserIcon  className='text-primary'/></span>
+                    <span className='mb-4'>Here is what we collect <VerifiedUserIcon className='text-primary' /></span>
                     <ul >
 
                         {
@@ -50,7 +50,7 @@ const Privacy = ({ handleClose }) => {
                 </div>
             </div>
             <p className='text-center text-sm '>We only capture your search history to build awesome widgets for you. We honestly can&apos;t even tell if it&apos;s you.</p>
-            
+
         </div>
     )
 }
@@ -70,22 +70,25 @@ const Footer = () => {
         <footer className="bg-gradient flex justify-center flex-col  items-center min-h-36 text-white">
             <div className="w-full flex-wrap flex items-center sm:justify-between justify-center border-white border-b-[1px]">
                 <span className='flex flex-col ml-3 mt-4 mb-4'>
-                    <p className='text-sm text-center'>💌 Get notified about new features and updates</p>
                     <div className='h-12 rounded-l-full rounded-r-full overflow-hidden mb-2  sm:w-[25rem] w-full mt-2 flex  justify-between items-center  border-[1px] border-primary text-white text-base rounded-md '>
                         <input placeholder="Enter Your Email" className="bg-transparent pl-3 placeholder:text-white w-[65%] placeholder:text-sm focus:outline-none " />
-                        <span onClick={()=>setOpen2(true)} className="w-[45%] px-6 rounded-l-full flex items-center bg-primary text-white h-full sm:w-auto cursor-pointer text-sm">
+                        <span onClick={() => setOpen2(true)} className="w-[45%] px-6 rounded-l-full flex items-center bg-primary text-white h-full sm:w-auto cursor-pointer text-sm">
                             Subscribe
                             {/* <ArrowCircleRightIcon sx={{ color: 'white', ml: 1 }} /> */}
                         </span>
-                      
+
                     </div>
-                   
-                    <p className='text-sm text-center'>No spam. Unsubscribe anytime.</p>
+                    <p className='text-xs text-center'>Get notified about new features and updates. No spam. Unsubscribe anytime.</p>
+                    {/* <p className='text-xs text-center'>No spam. Unsubscribe anytime.</p> */}
                 </span>
                 <div className='flex flex-col mr-3'>
-                    <span className='flex gap-6  mb-3'>
+                    <span className='flex  sm:gap-4 gap-1 sm:flex-row flex-col  mb-3'>
+                        <a >For Developers</a>
+                        <span className='sm:block hidden'>|</span>
                         <a >Blog</a>
+                        <span className='sm:block hidden'>|</span>
                         <a onClick={handleOpen}>Privacy Policy</a>
+                        <span className='sm:block hidden'>|</span>
                         <a onClick={() => setOpen1(true)}>Contact Us</a>
                         <Modal
                             open={open}
@@ -203,7 +206,7 @@ const Footer = () => {
                 </div>
             </div>
             <span className="text-white text-xs mt-2 mb-2">© Frifty {new Date().getFullYear()}- All rights reserved</span>
-            <SimpleSnackbar open={open2} setOpen={setOpen2}/>
+            <SimpleSnackbar open={open2} setOpen={setOpen2} />
         </footer>
     );
 }
