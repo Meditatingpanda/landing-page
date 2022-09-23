@@ -72,7 +72,7 @@ const Footer = () => {
                 <span className='flex flex-col ml-3 mt-4 mb-4'>
                     <div className='h-12 rounded-l-full rounded-r-full overflow-hidden mb-2  sm:w-[25rem] w-full mt-2 flex  justify-between items-center  border-[1px] border-primary text-white text-base rounded-md '>
                         <input placeholder="Enter Your Email" className="bg-transparent pl-3 placeholder:text-white w-[65%] placeholder:text-sm focus:outline-none " />
-                        <span onClick={() => setOpen2(true)} className="w-[45%] px-6 rounded-l-full flex items-center bg-primary text-white h-full sm:w-auto cursor-pointer text-sm">
+                        <span onClick={() => setOpen2(true)} className="w-[45%] px-6  rounded-l-full flex justify-center items-center bg-primary text-white h-full sm:w-auto cursor-pointer text-sm">
                             Subscribe
                             {/* <ArrowCircleRightIcon sx={{ color: 'white', ml: 1 }} /> */}
                         </span>

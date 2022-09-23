@@ -54,11 +54,13 @@ const Navbar = () => {
           }}
         >
           <MenuItem onClick={handleClose}> <GitHubIcon className='mr-1' />Github</MenuItem>
-          <MenuItem onClick={handleClose}> <Image 
+          <MenuItem onClick={handleClose}> 
+          <Image 
           src='/chrome.png'
           width={25}
           height={25}
           alt='chrome'
+          className='-mt-[0.9px]'
 
          />Chome Store</MenuItem>
 
