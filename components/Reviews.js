@@ -49,8 +49,9 @@ const Reviews = () => {
         <h2 className="text-4xl font-bold tracking-tight text-center sm:text-5xl">
           What our users have to say!
         </h2>
-
-        <div className="mt-12 flex gap-5 swiper-container !overflow-hidden">
+        <p className="text-5xl text-center p-10 text-gray-400">Coming Soon!!</p>
+        {/* <div className="mt-12 flex gap-5 swiper-container !overflow-hidden">
+         
           <Swiper
             
             slidesPerView={3}
@@ -125,7 +126,9 @@ const Reviews = () => {
             
             
           </Swiper>
-        </div>
+
+
+        </div> */}
       </div>
 
 
