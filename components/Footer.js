@@ -23,7 +23,7 @@ const Privacy = ({ handleClose }) => {
         "Data you copy and paste"
 
     ]
-    const list2 = ["Browser history"]
+    const list2 = ["Google Search"]
     return (
         <div className='p-5  flex flex-col  gap-5 items-center absolute top-1/2 left-1/2 h-full sm:h-auto sm:w-[85%] md:w-3/4 lg:w-1/2 w-full text-white  -translate-x-1/2 -translate-y-1/2 bg-[#1A212A] rounded'>
             <CloseIcon onClick={handleClose} className='text-white absolute cursor-pointer right-2 top-2' />
@@ -49,7 +49,7 @@ const Privacy = ({ handleClose }) => {
                     </ul>
                 </div>
             </div>
-            <p className='text-center text-sm '>We only capture your search history to build awesome widgets for you. We honestly can&apos;t even tell if it&apos;s you.</p>
+            <p className='text-center text-sm '>We only monitor your Google searches to build awesome widgets. We honestly can&apos;t even tell it&apos;s you.</p>
 
         </div>
     )
