@@ -1,22 +1,20 @@
-import { Grid, TextField } from "@mui/material";
+import { Grid} from "@mui/material";
 import Navbar from "./Navbar";
 import SendIcon from '@mui/icons-material/Send';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import AddIcon from '@mui/icons-material/Add';
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import SearchIcon from '@mui/icons-material/Search';
 import PolylineIcon from '@mui/icons-material/Polyline';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import ThumbsUpDownIcon from '@mui/icons-material/ThumbsUpDown';
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 const Home = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient flex justify-center items-center">
       <Navbar />
-      <div className="flex mt-[5.5rem]  sm:mt-0 flex-col  items-center justify-center">
+      <div className="flex max-h-fit mt-[5.5rem]  sm:mt-0 flex-col  items-center justify-center">
         <div className="text-white pl-7 sm:pl-0 mb-3 flex justify-center  sm:text-5xl text-3xl sm:items-center font-bold"><SendIcon fontSize="150px" className="-rotate-45 sm:-mt-2 " />The ultimate search extension</div>
         <Grid container sx={{ width: "85%", mt: 5 }}>
           <Grid xs={12} sm={6} item className="flex  flex-col justify-center">
