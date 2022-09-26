@@ -22,3 +22,8 @@ Clone the Repo
 
 <img width="1440" alt="Screenshot 2022-09-26 at 2 36 52 PM" src="https://user-images.githubusercontent.com/83230804/192237650-9d4fd0e0-bfc9-41a3-a2ae-4f9fd6fd56f5.png">
 
+## Tech Stack
+
+**Client:** Next Js, Material UI, TailwindCSS , AOS 
+
+
