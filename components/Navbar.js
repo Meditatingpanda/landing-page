@@ -5,6 +5,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -16,9 +17,11 @@ const Navbar = () => {
   };
   return (
     <nav className="z-10 w-full top-0  text-3xl h-16 sm:h-20 fixed flex items-center justify-between  bg-black ">
-      <span>
+    <Link href='/'>
+      <span className='cursor-pointer'>
         <div className="text-white ml-5  font-bold">FRIFTY</div>
       </span>
+    </Link>
 
       <div className='sm:flex gap-6 mr-5  sm:visible hidden' >
         <GitHubIcon sx={{ color: "white", mt: 0.5 }} className='cursor-pointer' />
