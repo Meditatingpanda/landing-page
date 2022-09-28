@@ -17,7 +17,7 @@ const Privacy = ({ handleClose }) => {
     ]
     const list2 = ["Google Search"]
     return (
-        <div className='p-5   flex flex-col  gap-5 items-center   h-[85vh] pt-[9rem]  w-full text-white  bg-[#1A212A] '>
+        <div className='p-5   flex flex-col  gap-5 items-center   min-h-[85vh] pt-[7rem] xl:pt-[15%]  w-full text-white  bg-[#1A212A] '>
             <CloseIcon  className='text-white absolute cursor-pointer right-2 top-2' />
             <h1 className='text-center text-lg font-bold' >Privacy Policy 🔐</h1>
             <p className='text-center'>When you use our extension, you trust us with your data. We understand this is a big responsibility and work hard to protect your information.</p>
