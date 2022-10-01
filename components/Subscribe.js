@@ -2,15 +2,15 @@ import axios from "axios";
 
 const subscribeHandler = async (email) => {
   let isSuccess = false;
-  const res = await axios.post("url", {
+  const res = await axios.post("https://frifty-backend.herokuapp.com/newsletter", {
     email,
   });
 
-  if (res.status === 200) {
+  if (res.status === 201) {
     isSuccess = true;
   }
-
-  return isSuccess;
+  
+  return [isSuccess,res.data];
 };
 
 const queryHandler = async ({
@@ -22,7 +22,7 @@ const queryHandler = async ({
   message,
 }) => {
   let isSuccess = false;
-  const res = await axios.post("url", {
+  const res = await axios.post("https://frifty-backend.herokuapp.com/website-queries", {
     type,
     name,
     email,
@@ -30,7 +30,7 @@ const queryHandler = async ({
     phoneNo,
     message,
   });
-  if (res.status === 200) {
+  if (res.status === 201) {
     isSuccess = true;
   }
 
